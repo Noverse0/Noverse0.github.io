@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" data-lang="kr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daeyoung Roh | AI/ML Researcher</title>
-  <meta name="description" content="Daeyoung Roh - AI/ML Engineer & Researcher. Specializing in Graph Neural Networks, Generative Models, LLM-based Systems, and Recommendation Systems.">
+  <meta name="description" content="Daeyoung Roh - AI/ML Engineer & Researcher. LLM Systems, Efficient Serving, Production AI Systems.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,13 +18,17 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">DY.Roh</a>
       <div class="nav-links">
-        <a href="#focus">About</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#focus"><span class="kr">소개</span><span class="en">About</span></a>
+        <a href="#research"><span class="kr">연구</span><span class="en">Research</span></a>
+        <a href="#experience"><span class="kr">경력</span><span class="en">Experience</span></a>
+        <a href="#projects"><span class="kr">프로젝트</span><span class="en">Projects</span></a>
+        <a href="#contact"><span class="kr">연락처</span><span class="en">Contact</span></a>
       </div>
       <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-label-kr">EN</span>
+          <span class="lang-label-en">KR</span>
+        </button>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
           <span class="material-symbols-outlined theme-icon-light">light_mode</span>
@@ -34,13 +38,12 @@
         </button>
       </div>
     </div>
-    <!-- Mobile menu -->
     <div class="nav-mobile" id="navMobile">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#focus"><span class="kr">소개</span><span class="en">About</span></a>
+      <a href="#research"><span class="kr">연구</span><span class="en">Research</span></a>
+      <a href="#experience"><span class="kr">경력</span><span class="en">Experience</span></a>
+      <a href="#projects"><span class="kr">프로젝트</span><span class="en">Projects</span></a>
+      <a href="#contact"><span class="kr">연락처</span><span class="en">Contact</span></a>
     </div>
   </nav>
 
@@ -50,13 +53,20 @@
       <div class="hero-content">
         <p class="hero-label">AI/ML ENGINEER & RESEARCHER</p>
         <h1 class="hero-title">
-          Engineering Scalable<br>
-          <em>LLM Systems.</em>
+          <span class="kr">확장 가능한<br><em>LLM 시스템</em>을 만듭니다.</span>
+          <span class="en">Engineering Scalable<br><em>LLM Systems.</em></span>
         </h1>
         <p class="hero-description">
-          ML engineer turned systems researcher. I design and operate
-          <span class="text-accent">production-scale LLM systems</span>
-          — from efficient serving infrastructure to multi-agent pipelines — bridging the gap between ML research and real-world deployment.
+          <span class="kr">
+            ML 엔지니어에서 시스템 연구자로. 효율적인 서빙 인프라부터 멀티 에이전트 파이프라인까지,
+            <span class="text-accent">프로덕션 규모의 LLM 시스템</span>을 설계하고 운영하며
+            ML 연구와 실제 배포 사이의 간극을 좁히고 있습니다.
+          </span>
+          <span class="en">
+            ML engineer turned systems researcher. I design and operate
+            <span class="text-accent">production-scale LLM systems</span>
+            — from efficient serving infrastructure to multi-agent pipelines — bridging the gap between ML research and real-world deployment.
+          </span>
         </p>
         <div class="hero-actions">
           <a href="https://github.com/Noverse0" class="btn btn-primary" target="_blank" rel="noopener">
@@ -81,7 +91,7 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">INTELLECTUAL FOCUS</p>
-        <h2 class="section-title">Research Interests</h2>
+        <h2 class="section-title"><span class="kr">연구 관심사</span><span class="en">Research Interests</span></h2>
       </div>
       <div class="focus-grid focus-grid-3">
         <div class="focus-card focus-card-featured">
@@ -89,7 +99,10 @@
             <span class="material-symbols-outlined">memory</span>
           </div>
           <h3>LLM Systems & Efficient Serving</h3>
-          <p>Designing scalable and efficient LLM inference systems with a focus on throughput, latency, and cost optimization. Interested in SLO-aware serving, KV-cache optimization, batching/scheduling, and heterogeneous GPU cluster management for production-scale AI systems.</p>
+          <p>
+            <span class="kr">처리량, 지연 시간, 비용 최적화에 초점을 맞춘 확장 가능하고 효율적인 LLM 추론 시스템 설계. SLO-aware 서빙, KV-cache 최적화, 배칭/스케줄링, 이기종 GPU 클러스터 관리에 관심을 두고 있습니다.</span>
+            <span class="en">Designing scalable and efficient LLM inference systems with a focus on throughput, latency, and cost optimization. Interested in SLO-aware serving, KV-cache optimization, batching/scheduling, and heterogeneous GPU cluster management for production-scale AI systems.</span>
+          </p>
           <div class="focus-tag">PRIMARY FOCUS</div>
         </div>
         <div class="focus-card">
@@ -97,14 +110,20 @@
             <span class="material-symbols-outlined">smart_toy</span>
           </div>
           <h3>Production AI Systems</h3>
-          <p>Building and operating real-world LLM-based systems, including multi-agent RAG pipelines and enterprise AI assistants. Exploring system-level challenges in multi-tenant serving, workload heterogeneity, and end-to-end latency optimization.</p>
+          <p>
+            <span class="kr">멀티 에이전트 RAG 파이프라인과 기업용 AI 어시스턴트를 포함한 실제 LLM 기반 시스템 구축 및 운영. 멀티 테넌트 서빙, 워크로드 이질성, end-to-end 지연 시간 최적화에 관한 시스템 수준의 과제를 탐구합니다.</span>
+            <span class="en">Building and operating real-world LLM-based systems, including multi-agent RAG pipelines and enterprise AI assistants. Exploring system-level challenges in multi-tenant serving, workload heterogeneity, and end-to-end latency optimization.</span>
+          </p>
         </div>
         <div class="focus-card">
           <div class="focus-icon">
             <span class="material-symbols-outlined">hub</span>
           </div>
           <h3>Scalable ML for Real-World Applications</h3>
-          <p>Developing machine learning models for recommendation, graph-based learning, and generative modeling, with a focus on bridging model performance and system efficiency in real-world deployments.</p>
+          <p>
+            <span class="kr">추천 시스템, 그래프 기반 학습, 생성 모델링을 위한 ML 모델 개발. 실제 배포 환경에서 모델 성능과 시스템 효율성의 균형을 맞추는 데 집중합니다.</span>
+            <span class="en">Developing machine learning models for recommendation, graph-based learning, and generative modeling, with a focus on bridging model performance and system efficiency in real-world deployments.</span>
+          </p>
         </div>
       </div>
     </div>
@@ -115,8 +134,11 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">RESEARCH COLLECTION</p>
-        <h2 class="section-title">Research &amp; Publications</h2>
-        <p class="section-subtitle">From scalable ML and efficient inference to production AI systems — research grounded in real-world deployment.</p>
+        <h2 class="section-title"><span class="kr">연구 및 논문</span><span class="en">Research &amp; Publications</span></h2>
+        <p class="section-subtitle">
+          <span class="kr">확장 가능한 ML과 효율적인 추론에서 프로덕션 AI 시스템까지 — 실제 배포에 기반한 연구.</span>
+          <span class="en">From scalable ML and efficient inference to production AI systems — research grounded in real-world deployment.</span>
+        </p>
       </div>
 
       <!-- Featured Publications -->
@@ -129,7 +151,10 @@
             <div class="pub-venue">IEEE/CVF WACV 2025</div>
             <h3 class="pub-title">CTIP: Towards Accurate Tabular-to-Image Generation for Tire Footprint Generation</h3>
             <p class="pub-authors"><strong>D. Roh</strong>, D. Han, J. Nam, Y. You, J. Park, J. Oh, M. Yi</p>
-            <p class="pub-desc">Proposed CTIP by adapting CLIP for tabular data and trained Stable Diffusion from scratch to improve generation quality for industrial tire footprint images.</p>
+            <p class="pub-desc">
+              <span class="kr">CLIP을 테이블 데이터에 적용한 CTIP를 제안하고, Stable Diffusion을 처음부터 학습하여 산업용 타이어 풋프린트 이미지의 생성 품질을 향상시켰습니다.</span>
+              <span class="en">Proposed CTIP by adapting CLIP for tabular data and trained Stable Diffusion from scratch to improve generation quality for industrial tire footprint images.</span>
+            </p>
             <div class="pub-links">
               <a href="assets/papers/ctip-paper.pdf" class="pub-link" target="_blank">Paper</a>
               <a href="assets/slides/ctip-presentation.pdf" class="pub-link" target="_blank">Slides</a>
@@ -145,7 +170,10 @@
             <div class="pub-venue">IEEE Big Data 2024</div>
             <h3 class="pub-title">Closer through Commonality: Enhancing Hypergraph Contrastive Learning with Shared Groups</h3>
             <p class="pub-authors"><strong>D. Roh</strong>, D. Han, D. Kim, K. Han, M. Yi</p>
-            <p class="pub-desc">Proposed HyFi, a fine-grained contrastive learning framework for hypergraphs that introduces weak positive/negative pairs beyond standard contrastive pairs.</p>
+            <p class="pub-desc">
+              <span class="kr">하이퍼그래프를 위한 세밀한 대조 학습 프레임워크 HyFi를 제안하여, 기존 대조 쌍을 넘어서는 약한 양성/음성 쌍을 도입했습니다.</span>
+              <span class="en">Proposed HyFi, a fine-grained contrastive learning framework for hypergraphs that introduces weak positive/negative pairs beyond standard contrastive pairs.</span>
+            </p>
             <div class="pub-links">
               <a href="assets/papers/hyfi-paper.pdf" class="pub-link" target="_blank">Paper</a>
               <a href="assets/slides/hyfi-presentation.pdf" class="pub-link" target="_blank">Slides</a>
@@ -155,7 +183,7 @@
         </div>
       </div>
 
-      <!-- Other Publications -->
+      <!-- Published -->
       <div class="pub-section-sub">
         <h3 class="pub-section-title">Published</h3>
         <div class="pub-list">
@@ -197,6 +225,7 @@
         </div>
       </div>
 
+      <!-- Under Review -->
       <div class="pub-section-sub">
         <h3 class="pub-section-title">Under Review</h3>
         <div class="pub-list">
@@ -205,7 +234,10 @@
             <div class="pub-item-body">
               <h4>Bridging Generative Reasoning and Efficient Recommendation via Offline Preference Materialization</h4>
               <p class="pub-authors"><strong>D. Roh*</strong>, D. Han*, S. Hong, H. Song, M. Yi</p>
-              <p class="pub-note">LLM as offline data generator for preference-aware item representations</p>
+              <p class="pub-note">
+                <span class="kr">LLM을 오프라인 데이터 생성기로 활용하여 선호도 인식 아이템 표현 생성</span>
+                <span class="en">LLM as offline data generator for preference-aware item representations</span>
+              </p>
             </div>
           </div>
 
@@ -214,7 +246,10 @@
             <div class="pub-item-body">
               <h4>Distilling LLM Reasoning into Dense Encoders: Bridging the Accuracy-Efficiency Gap in Recommendation</h4>
               <p class="pub-authors"><strong>D. Roh*</strong>, D. Han*, A. Y. Kim, H. Song, M. Yi</p>
-              <p class="pub-note">R2END framework compressing reasoning into dense representations</p>
+              <p class="pub-note">
+                <span class="kr">R2END 프레임워크를 통해 추론을 밀집 표현으로 압축</span>
+                <span class="en">R2END framework compressing reasoning into dense representations</span>
+              </p>
             </div>
           </div>
 
@@ -223,7 +258,10 @@
             <div class="pub-item-body">
               <h4>LiteUP4Rec: Efficient User Profiling from LLM-Derived Semantic Supervision</h4>
               <p class="pub-authors">D. Han, <strong>D. Roh</strong>, J. Jeong, M. Yi</p>
-              <p class="pub-note">Lightweight approximation of LLM-based user profiles for real-time recommendation</p>
+              <p class="pub-note">
+                <span class="kr">실시간 추천을 위한 LLM 기반 사용자 프로파일의 경량 근사</span>
+                <span class="en">Lightweight approximation of LLM-based user profiles for real-time recommendation</span>
+              </p>
             </div>
           </div>
         </div>
@@ -237,7 +275,7 @@
       <div class="section-header-split">
         <div>
           <p class="section-label">CAREER TRAJECTORY</p>
-          <h2 class="section-title">Experience &amp; Education</h2>
+          <h2 class="section-title"><span class="kr">경력 및 학력</span><span class="en">Experience &amp; Education</span></h2>
         </div>
       </div>
 
@@ -251,11 +289,11 @@
             <div class="timeline-company">Cocone Corp. · AL Lab</div>
             <div class="timeline-location">Seoul, South Korea</div>
             <ul class="timeline-details">
-              <li>Led AI and backend development for Flux-based design generation platform with fine-tuning and model serving</li>
-              <li>Designed and developed multi-agent RAG system for internal knowledge search automation</li>
-              <li>Built HR AI analytics platform for resume analysis, interview evaluation with STT+LLM</li>
-              <li>Developed Slack-based KPI agent and legal AI compliance tool</li>
-              <li>Deployed on AWS EKS, RunPod, PostgreSQL infrastructure</li>
+              <li><span class="kr">Flux 기반 디자인 생성 플랫폼의 AI 및 백엔드 개발 리드</span><span class="en">Led AI and backend development for Flux-based design generation platform with fine-tuning and model serving</span></li>
+              <li><span class="kr">사내 지식 검색 자동화를 위한 멀티 에이전트 RAG 시스템 설계 및 개발</span><span class="en">Designed and developed multi-agent RAG system for internal knowledge search automation</span></li>
+              <li><span class="kr">이력서 분석, STT+LLM 면접 평가 리포트 자동 생성 시스템 구축</span><span class="en">Built HR AI analytics platform for resume analysis, interview evaluation with STT+LLM</span></li>
+              <li><span class="kr">Slack 기반 KPI 에이전트 및 법률 AI 저작권 분석 도구 개발</span><span class="en">Developed Slack-based KPI agent and legal AI compliance tool</span></li>
+              <li><span class="kr">AWS EKS, RunPod, PostgreSQL 인프라에 배포 및 운영</span><span class="en">Deployed on AWS EKS, RunPod, PostgreSQL infrastructure</span></li>
             </ul>
             <div class="timeline-tags">
               <span class="tag">LLM</span>
@@ -272,13 +310,13 @@
           <div class="timeline-date">2022.09 — 2024.09</div>
           <div class="timeline-content">
             <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
-            <div class="timeline-role">M.S. in Data Science</div>
+            <div class="timeline-role"><span class="kr">데이터사이언스 석사</span><span class="en">M.S. in Data Science</span></div>
             <div class="timeline-company">KAIST · Graduate School of Data Science</div>
-            <div class="timeline-location">Daejeon, South Korea · Advisor: Prof. Munyoung Yi</div>
+            <div class="timeline-location"><span class="kr">대전, 대한민국 · 지도교수: 이문용</span><span class="en">Daejeon, South Korea · Advisor: Prof. Munyoung Yi</span></div>
             <ul class="timeline-details">
-              <li>Published 5 papers on GNN, hypergraph learning, generative models, and recommendation systems</li>
-              <li>Led Hankook Tire industry collaboration project on tire footprint image generation (WACV 2025)</li>
-              <li>Developed pet diagnosis prediction models using ML</li>
+              <li><span class="kr">GNN, 하이퍼그래프 학습, 생성 모델, 추천 시스템 분야에서 5편의 논문 출판</span><span class="en">Published 5 papers on GNN, hypergraph learning, generative models, and recommendation systems</span></li>
+              <li><span class="kr">한국타이어 산학협력 프로젝트 리드 — 타이어 풋프린트 이미지 생성 (WACV 2025)</span><span class="en">Led Hankook Tire industry collaboration project on tire footprint image generation (WACV 2025)</span></li>
+              <li><span class="kr">ML 기반 반려동물 진단 예측 모델 개발</span><span class="en">Developed pet diagnosis prediction models using ML</span></li>
             </ul>
             <div class="timeline-tags">
               <span class="tag">GNN</span>
@@ -298,8 +336,7 @@
             <div class="timeline-company">Fount Inc.</div>
             <div class="timeline-location">Seoul, South Korea</div>
             <ul class="timeline-details">
-              <li>Conducted research survey on stock price prediction</li>
-              <li>Prepared technical reports and research assistance</li>
+              <li><span class="kr">주가 예측 관련 최신 연구 조사 및 기술 보고서 작성</span><span class="en">Conducted research survey on stock price prediction and prepared technical reports</span></li>
             </ul>
           </div>
         </div>
@@ -309,9 +346,9 @@
           <div class="timeline-date">2018.03 — 2022.08</div>
           <div class="timeline-content">
             <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
-            <div class="timeline-role">B.A. in Economics &amp; ICE</div>
-            <div class="timeline-company">Handong Global University</div>
-            <div class="timeline-location">Pohang, South Korea · Information &amp; Communication Engineering (Double Major)</div>
+            <div class="timeline-role"><span class="kr">경제학 · 정보통신공학 학사</span><span class="en">B.A. in Economics &amp; ICE</span></div>
+            <div class="timeline-company"><span class="kr">한동대학교</span><span class="en">Handong Global University</span></div>
+            <div class="timeline-location"><span class="kr">포항, 대한민국 · 정보통신공학 복수전공</span><span class="en">Pohang, South Korea · Information &amp; Communication Engineering (Double Major)</span></div>
           </div>
         </div>
       </div>
@@ -323,7 +360,7 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">TECHNICAL ARCHIVE</p>
-        <h2 class="section-title">Key Projects</h2>
+        <h2 class="section-title"><span class="kr">주요 프로젝트</span><span class="en">Key Projects</span></h2>
       </div>
       <div class="projects-grid">
         <div class="project-card">
@@ -331,8 +368,11 @@
             <span class="material-symbols-outlined">chat</span>
             <span class="project-date">2025 — Present</span>
           </div>
-          <h3>RAGOps System</h3>
-          <p>Multi-agent RAG system for enterprise knowledge search automation with feedback-driven updates. Built with Slack App, LangChain, and DeepAgent.</p>
+          <h3><span class="kr">RAGOps 시스템</span><span class="en">RAGOps System</span></h3>
+          <p>
+            <span class="kr">사내 지식(PDF, 포털, Google 데이터) 검색 자동화를 위한 멀티 에이전트 RAG 시스템. Slack App, LangChain, DeepAgent 기반.</span>
+            <span class="en">Multi-agent RAG system for enterprise knowledge search automation with feedback-driven updates. Built with Slack App, LangChain, and DeepAgent.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">RAG</span>
             <span class="tag">LangChain</span>
@@ -345,8 +385,11 @@
             <span class="material-symbols-outlined">palette</span>
             <span class="project-date">2024 — 2025</span>
           </div>
-          <h3>Design Generation Platform</h3>
-          <p>Flux-based image generation model fine-tuning and serving system with AWS EKS, RunPod infrastructure for end-to-end generative AI pipeline.</p>
+          <h3><span class="kr">디자인 생성 플랫폼</span><span class="en">Design Generation Platform</span></h3>
+          <p>
+            <span class="kr">Flux 기반 이미지 생성 모델 파인튜닝 및 서빙 시스템. AWS EKS, RunPod 인프라에서 end-to-end 생성 AI 파이프라인 구축.</span>
+            <span class="en">Flux-based image generation model fine-tuning and serving system with AWS EKS, RunPod infrastructure for end-to-end generative AI pipeline.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">Flux</span>
             <span class="tag">AWS EKS</span>
@@ -359,8 +402,11 @@
             <span class="material-symbols-outlined">gavel</span>
             <span class="project-date">2025 — 2026</span>
           </div>
-          <h3>Legal AI Compliance Tool</h3>
-          <p>Image similarity search combined with LLM reasoning for copyright violation detection. Deployed as internal legal support tool.</p>
+          <h3><span class="kr">법률 AI 저작권 분석 도구</span><span class="en">Legal AI Compliance Tool</span></h3>
+          <p>
+            <span class="kr">이미지 유사도 검색과 LLM 추론을 결합한 저작권 위반 판단 시스템. 법무팀 실제 검토 프로세스에 적용.</span>
+            <span class="en">Image similarity search combined with LLM reasoning for copyright violation detection. Deployed as internal legal support tool.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">LLM</span>
             <span class="tag">Image Search</span>
@@ -373,8 +419,11 @@
             <span class="material-symbols-outlined">group</span>
             <span class="project-date">2025</span>
           </div>
-          <h3>HR AI Analysis Platform</h3>
-          <p>Automated resume analysis, interview evaluation (STT+LLM), and LLM-based interview analysis chat. Production service used in Korea and Japan.</p>
+          <h3><span class="kr">HR AI 분석 플랫폼</span><span class="en">HR AI Analysis Platform</span></h3>
+          <p>
+            <span class="kr">이력서 분석, 면접 평가(STT+LLM), LLM 기반 인터뷰 분석 챗. 한국·일본에서 실제 HR이 사용하는 프로덕션 서비스.</span>
+            <span class="en">Automated resume analysis, interview evaluation (STT+LLM), and LLM-based interview analysis chat. Production service used in Korea and Japan.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">STT</span>
             <span class="tag">LLM</span>
@@ -387,8 +436,11 @@
             <span class="material-symbols-outlined">tire_repair</span>
             <span class="project-date">2023 — 2024</span>
           </div>
-          <h3>Tire Footprint Generation</h3>
-          <p>CTIP model for generating tire footprint images from tabular specifications. Hankook Tire industry collaboration, published at WACV 2025.</p>
+          <h3><span class="kr">타이어 풋프린트 이미지 생성</span><span class="en">Tire Footprint Generation</span></h3>
+          <p>
+            <span class="kr">테이블 사양 정보로부터 타이어 풋프린트 이미지를 생성하는 CTIP 모델. 한국타이어 산학협력, WACV 2025 출판.</span>
+            <span class="en">CTIP model for generating tire footprint images from tabular specifications. Hankook Tire industry collaboration, published at WACV 2025.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">CTIP</span>
             <span class="tag">Stable Diffusion</span>
@@ -401,8 +453,11 @@
             <span class="material-symbols-outlined">bar_chart</span>
             <span class="project-date">2024 — Present</span>
           </div>
-          <h3>KPI Agent</h3>
-          <p>Slack-based BI assistant for querying service KPIs and generating automated reports for non-technical departments.</p>
+          <h3><span class="kr">KPI 에이전트</span><span class="en">KPI Agent</span></h3>
+          <p>
+            <span class="kr">서비스 KPI 조회 및 자동 보고서 생성을 위한 Slack 기반 BI 어시스턴트. 비기술 부서의 실시간 KPI 활용 지원.</span>
+            <span class="en">Slack-based BI assistant for querying service KPIs and generating automated reports for non-technical departments.</span>
+          </p>
           <div class="project-tags">
             <span class="tag">Slack Agent</span>
             <span class="tag">LLM API</span>
@@ -418,7 +473,7 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">TECHNICAL REPERTOIRE</p>
-        <h2 class="section-title">Core Competencies</h2>
+        <h2 class="section-title"><span class="kr">핵심 역량</span><span class="en">Core Competencies</span></h2>
       </div>
       <div class="skills-grid">
         <div class="skill-group">
@@ -475,24 +530,30 @@
     <div class="container">
       <div class="section-header">
         <p class="section-label">RECOGNITION</p>
-        <h2 class="section-title">Honors &amp; Awards</h2>
+        <h2 class="section-title"><span class="kr">수상 경력</span><span class="en">Honors &amp; Awards</span></h2>
       </div>
       <div class="awards-list">
         <div class="award-item">
           <div class="award-year">2023</div>
           <div class="award-content">
-            <h3>Creativity Award</h3>
-            <div class="award-org">K-DS Conference Hackathon</div>
-            <p>Developed LLM fine-tuning based on KoAlpaca and Key-Value RAG system for Korean history chatbot.</p>
+            <h3><span class="kr">창의상</span><span class="en">Creativity Award</span></h3>
+            <div class="award-org"><span class="kr">K-DS 컨퍼런스 해커톤</span><span class="en">K-DS Conference Hackathon</span></div>
+            <p>
+              <span class="kr">KoAlpaca 기반 LLM 파인튜닝과 Key-Value RAG 시스템을 활용한 한국 역사 챗봇 개발.</span>
+              <span class="en">Developed LLM fine-tuning based on KoAlpaca and Key-Value RAG system for Korean history chatbot.</span>
+            </p>
             <a href="https://github.com/Noverse0/K-HyunmooGPT" class="pub-link" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
         <div class="award-item">
           <div class="award-year">2023</div>
           <div class="award-content">
-            <h3>Excellence Award</h3>
-            <div class="award-org">Hankook Tire &times; KAIST AI Competition</div>
-            <p>Developed Conditional GAN-based tire footprint image generation model. Extended into the CTIP research project (WACV 2025).</p>
+            <h3><span class="kr">우수상</span><span class="en">Excellence Award</span></h3>
+            <div class="award-org"><span class="kr">한국앤컴퍼니그룹 &times; KAIST AI 경진대회</span><span class="en">Hankook Tire &times; KAIST AI Competition</span></div>
+            <p>
+              <span class="kr">Conditional GAN 기반 타이어 풋프린트 이미지 생성 모델 개발. CTIP 연구 프로젝트(WACV 2025)로 확장.</span>
+              <span class="en">Developed Conditional GAN-based tire footprint image generation model. Extended into the CTIP research project (WACV 2025).</span>
+            </p>
           </div>
         </div>
       </div>
@@ -502,8 +563,14 @@
   <!-- Contact Section -->
   <section class="section section-cta" id="contact">
     <div class="container">
-      <h2 class="cta-title">Discuss a potential<br><em>collaboration?</em></h2>
-      <p class="cta-description">I am currently preparing for a PhD in AI. If you are interested in my research or would like to collaborate, please feel free to reach out.</p>
+      <h2 class="cta-title">
+        <span class="kr">함께 연구할<br><em>기회를 찾고 있습니다.</em></span>
+        <span class="en">Discuss a potential<br><em>collaboration?</em></span>
+      </h2>
+      <p class="cta-description">
+        <span class="kr">현재 AI 분야 박사과정 진학을 준비하고 있습니다. 연구에 관심이 있으시거나 협업을 원하시면 편하게 연락 주세요.</span>
+        <span class="en">I am currently preparing for a PhD in AI. If you are interested in my research or would like to collaborate, please feel free to reach out.</span>
+      </p>
       <div class="cta-links">
         <a href="mailto:dybroh@gmail.com" class="btn btn-primary btn-lg">
           <span class="material-symbols-outlined">mail</span> dybroh@gmail.com

@@ -1,9 +1,9 @@
-// Theme toggle
+// Theme toggle (default: light)
 const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
 
 function getStoredTheme() {
-  return localStorage.getItem('theme') || 'dark';
+  return localStorage.getItem('theme') || 'light';
 }
 
 function applyTheme(theme) {
@@ -16,6 +16,26 @@ applyTheme(getStoredTheme());
 themeToggle.addEventListener('click', () => {
   const current = root.getAttribute('data-theme');
   applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// Language toggle (default: kr)
+const langToggle = document.getElementById('langToggle');
+
+function getStoredLang() {
+  return localStorage.getItem('lang') || 'kr';
+}
+
+function applyLang(lang) {
+  root.setAttribute('data-lang', lang);
+  root.setAttribute('lang', lang === 'kr' ? 'ko' : 'en');
+  localStorage.setItem('lang', lang);
+}
+
+applyLang(getStoredLang());
+
+langToggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-lang');
+  applyLang(current === 'kr' ? 'en' : 'kr');
 });
 
 // Mobile navigation toggle
@@ -62,7 +82,6 @@ function updateActiveNav() {
 
     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
       navLinks.forEach(link => {
-        link.classList.remove('active');
         if (link.getAttribute('href') === `#${sectionId}`) {
           link.style.color = 'var(--primary)';
         } else {
