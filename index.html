@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daeyoung Roh | AI/ML Researcher</title>
+  <meta name="description" content="Daeyoung Roh - AI/ML Engineer & Researcher. Specializing in Graph Neural Networks, Generative Models, LLM-based Systems, and Recommendation Systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">DY.Roh</a>
+      <div class="nav-links">
+        <a href="#focus">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
+          <span class="material-symbols-outlined theme-icon-light">light_mode</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-label">AI/ML ENGINEER & RESEARCHER</p>
+        <h1 class="hero-title">
+          Building the Future of<br>
+          <em>Intelligent Systems.</em>
+        </h1>
+        <p class="hero-description">
+          I focus on developing practical AI systems through rapid adaptation of emerging technologies and data-driven problem solving. My research spans
+          <span class="text-accent">Graph Neural Networks</span>,
+          <span class="text-accent">Generative Models</span>, and
+          <span class="text-accent">Large Language Models</span>
+          for recommendation systems and AI agents.
+        </p>
+        <div class="hero-actions">
+          <a href="https://github.com/Noverse0" class="btn btn-primary" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined">code</span> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/rohdy" class="btn btn-secondary" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined">person</span> LinkedIn
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span class="material-symbols-outlined">mail</span> Contact
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-placeholder">
+          <span class="material-symbols-outlined">person</span>
+          <p>Photo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intellectual Focus -->
+  <section class="section section-alt" id="focus">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">INTELLECTUAL FOCUS</p>
+        <h2 class="section-title">Research Interests</h2>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card focus-card-featured">
+          <div class="focus-icon">
+            <span class="material-symbols-outlined">hub</span>
+          </div>
+          <h3>LLM-based Recommendation</h3>
+          <p>Distilling LLM reasoning into lightweight encoders for scalable, efficient recommendation systems that bridge accuracy and latency.</p>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">
+            <span class="material-symbols-outlined">scatter_plot</span>
+          </div>
+          <h3>Graph Neural Networks</h3>
+          <p>Hypergraph contrastive learning and GNN-based models for education, social, and recommendation domains.</p>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">
+            <span class="material-symbols-outlined">auto_awesome</span>
+          </div>
+          <h3>Generative Models</h3>
+          <p>Tabular-to-image generation, Flux-based fine-tuning, and conditional generation for industrial applications.</p>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">
+            <span class="material-symbols-outlined">smart_toy</span>
+          </div>
+          <h3>AI Agents & RAG</h3>
+          <p>Multi-agent RAG systems, Slack-based AI assistants, and end-to-end AI service pipelines for enterprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research & Publications -->
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">RESEARCH COLLECTION</p>
+        <h2 class="section-title">Research &amp; Publications</h2>
+        <p class="section-subtitle">An editorial collection of technical inquiries into Neural Architectures, Generative Models, and Recommendation Systems.</p>
+      </div>
+
+      <!-- Featured Publications -->
+      <div class="pub-featured-grid">
+        <div class="pub-card pub-card-featured">
+          <div class="pub-image-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <p>Paper Figure</p>
+          </div>
+          <div class="pub-content">
+            <div class="pub-venue">IEEE/CVF WACV 2025</div>
+            <h3 class="pub-title">CTIP: Towards Accurate Tabular-to-Image Generation for Tire Footprint Generation</h3>
+            <p class="pub-authors"><strong>D. Roh</strong>, D. Han, J. Nam, Y. You, J. Park, J. Oh, M. Yi</p>
+            <p class="pub-desc">Proposed CTIP by adapting CLIP for tabular data and trained Stable Diffusion from scratch to improve generation quality for industrial tire footprint images.</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-card pub-card-featured">
+          <div class="pub-image-placeholder">
+            <span class="material-symbols-outlined">image</span>
+            <p>Paper Figure</p>
+          </div>
+          <div class="pub-content">
+            <div class="pub-venue">IEEE Big Data 2024</div>
+            <h3 class="pub-title">Closer through Commonality: Enhancing Hypergraph Contrastive Learning with Shared Groups</h3>
+            <p class="pub-authors"><strong>D. Roh</strong>, D. Han, D. Kim, K. Han, M. Yi</p>
+            <p class="pub-desc">Proposed HyFi, a fine-grained contrastive learning framework for hypergraphs that introduces weak positive/negative pairs beyond standard contrastive pairs.</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Paper</a>
+              <a href="https://github.com/Noverse0/HyFi" class="pub-link" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Publications -->
+      <div class="pub-section-sub">
+        <h3 class="pub-section-title">Published</h3>
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-item-venue">ECML-PKDD 2025</div>
+            <div class="pub-item-body">
+              <h4>Fine-Grained Multi-Prompt Essay Scoring with Multi-Level Disentanglement</h4>
+              <p class="pub-authors">D. Han, <strong>D. Roh</strong>, E. Han, H. Song, M. Y. Yi</p>
+            </div>
+            <div class="pub-item-links">
+              <a href="#" class="pub-link">Paper</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-venue">ACM SAC 2024</div>
+            <div class="pub-item-body">
+              <h4>SIG-Net: GNN-based MOOC Dropout Prediction Model</h4>
+              <p class="pub-authors"><strong>D. Roh</strong>, D. Han, D. Kim, K. Han, M. Yi</p>
+            </div>
+            <div class="pub-item-links">
+              <a href="#" class="pub-link">Paper</a>
+              <a href="https://github.com/Noverse0/SIG-Net" class="pub-link" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-venue">ACM SAC 2024</div>
+            <div class="pub-item-body">
+              <h4>Less is More: Lightweight Graph-based Fashion Recommendation</h4>
+              <p class="pub-authors">D. Kim, D. Han, <strong>D. Roh</strong>, K. Han, M. Yi</p>
+            </div>
+            <div class="pub-item-links">
+              <a href="#" class="pub-link">Paper</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-section-sub">
+        <h3 class="pub-section-title">Under Review</h3>
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-item-venue">SIGIR 2026</div>
+            <div class="pub-item-body">
+              <h4>Bridging Generative Reasoning and Efficient Recommendation via Offline Preference Materialization</h4>
+              <p class="pub-authors"><strong>D. Roh*</strong>, D. Han*, S. Hong, H. Song, M. Yi</p>
+              <p class="pub-note">LLM as offline data generator for preference-aware item representations</p>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-venue">ACL 2026</div>
+            <div class="pub-item-body">
+              <h4>Distilling LLM Reasoning into Dense Encoders: Bridging the Accuracy-Efficiency Gap in Recommendation</h4>
+              <p class="pub-authors"><strong>D. Roh*</strong>, D. Han*, A. Y. Kim, H. Song, M. Yi</p>
+              <p class="pub-note">R2END framework compressing reasoning into dense representations</p>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-venue">ARR</div>
+            <div class="pub-item-body">
+              <h4>LiteUP4Rec: Efficient User Profiling from LLM-Derived Semantic Supervision</h4>
+              <p class="pub-authors">D. Han, <strong>D. Roh</strong>, J. Jeong, M. Yi</p>
+              <p class="pub-note">Lightweight approximation of LLM-based user profiles for real-time recommendation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header-split">
+        <div>
+          <p class="section-label">CAREER TRAJECTORY</p>
+          <h2 class="section-title">Experience &amp; Education</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">2024.07 — Present</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">WORK</div>
+            <div class="timeline-role">AI Engineer</div>
+            <div class="timeline-company">Cocone Corp. · AL Lab</div>
+            <div class="timeline-location">Seoul, South Korea</div>
+            <ul class="timeline-details">
+              <li>Led AI and backend development for Flux-based design generation platform with fine-tuning and model serving</li>
+              <li>Designed and developed multi-agent RAG system for internal knowledge search automation</li>
+              <li>Built HR AI analytics platform for resume analysis, interview evaluation with STT+LLM</li>
+              <li>Developed Slack-based KPI agent and legal AI compliance tool</li>
+              <li>Deployed on AWS EKS, RunPod, PostgreSQL infrastructure</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">LLM</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Flux</span>
+              <span class="tag">AWS EKS</span>
+              <span class="tag">Multi-Agent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker timeline-marker-edu"></div>
+          <div class="timeline-date">2022.09 — 2024.09</div>
+          <div class="timeline-content">
+            <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
+            <div class="timeline-role">M.S. in Data Science</div>
+            <div class="timeline-company">KAIST · Graduate School of Data Science</div>
+            <div class="timeline-location">Daejeon, South Korea · Advisor: Prof. Munyoung Yi</div>
+            <ul class="timeline-details">
+              <li>Published 5 papers on GNN, hypergraph learning, generative models, and recommendation systems</li>
+              <li>Led Hankook Tire industry collaboration project on tire footprint image generation (WACV 2025)</li>
+              <li>Developed pet diagnosis prediction models using ML</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">GNN</span>
+              <span class="tag">Contrastive Learning</span>
+              <span class="tag">Generative Models</span>
+              <span class="tag">Recommendation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">2021.07 — 2021.08</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">WORK</div>
+            <div class="timeline-role">AI Core Research Intern</div>
+            <div class="timeline-company">Fount Inc.</div>
+            <div class="timeline-location">Seoul, South Korea</div>
+            <ul class="timeline-details">
+              <li>Conducted research survey on stock price prediction</li>
+              <li>Prepared technical reports and research assistance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker timeline-marker-edu"></div>
+          <div class="timeline-date">2018.03 — 2022.08</div>
+          <div class="timeline-content">
+            <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
+            <div class="timeline-role">B.A. in Economics &amp; ICE</div>
+            <div class="timeline-company">Handong Global University</div>
+            <div class="timeline-location">Pohang, South Korea · Information &amp; Communication Engineering (Double Major)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">TECHNICAL ARCHIVE</p>
+        <h2 class="section-title">Key Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">chat</span>
+            <span class="project-date">2025 — Present</span>
+          </div>
+          <h3>RAGOps System</h3>
+          <p>Multi-agent RAG system for enterprise knowledge search automation with feedback-driven updates. Built with Slack App, LangChain, and DeepAgent.</p>
+          <div class="project-tags">
+            <span class="tag">RAG</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Slack</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">palette</span>
+            <span class="project-date">2024 — 2025</span>
+          </div>
+          <h3>Design Generation Platform</h3>
+          <p>Flux-based image generation model fine-tuning and serving system with AWS EKS, RunPod infrastructure for end-to-end generative AI pipeline.</p>
+          <div class="project-tags">
+            <span class="tag">Flux</span>
+            <span class="tag">AWS EKS</span>
+            <span class="tag">RunPod</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">gavel</span>
+            <span class="project-date">2025 — 2026</span>
+          </div>
+          <h3>Legal AI Compliance Tool</h3>
+          <p>Image similarity search combined with LLM reasoning for copyright violation detection. Deployed as internal legal support tool.</p>
+          <div class="project-tags">
+            <span class="tag">LLM</span>
+            <span class="tag">Image Search</span>
+            <span class="tag">Compliance</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">group</span>
+            <span class="project-date">2025</span>
+          </div>
+          <h3>HR AI Analysis Platform</h3>
+          <p>Automated resume analysis, interview evaluation (STT+LLM), and LLM-based interview analysis chat. Production service used in Korea and Japan.</p>
+          <div class="project-tags">
+            <span class="tag">STT</span>
+            <span class="tag">LLM</span>
+            <span class="tag">Full-stack</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">tire_repair</span>
+            <span class="project-date">2023 — 2024</span>
+          </div>
+          <h3>Tire Footprint Generation</h3>
+          <p>CTIP model for generating tire footprint images from tabular specifications. Hankook Tire industry collaboration, published at WACV 2025.</p>
+          <div class="project-tags">
+            <span class="tag">CTIP</span>
+            <span class="tag">Stable Diffusion</span>
+            <span class="tag">WACV</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span class="project-date">2024 — Present</span>
+          </div>
+          <h3>KPI Agent</h3>
+          <p>Slack-based BI assistant for querying service KPIs and generating automated reports for non-technical departments.</p>
+          <div class="project-tags">
+            <span class="tag">Slack Agent</span>
+            <span class="tag">LLM API</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">TECHNICAL REPERTOIRE</p>
+        <h2 class="section-title">Core Competencies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>AI / ML</h3>
+          <div class="skill-tags">
+            <span class="tag tag-accent">LLM / RAG</span>
+            <span class="tag tag-accent">Recommendation Systems</span>
+            <span class="tag tag-accent">GNN</span>
+            <span class="tag tag-accent">Generative Models</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">LightGBM</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">R</span>
+            <span class="tag">LaTeX</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS EKS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">RunPod</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Slack App SDK</span>
+            <span class="tag">LangChain</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">RECOGNITION</p>
+        <h2 class="section-title">Honors &amp; Awards</h2>
+      </div>
+      <div class="awards-list">
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div class="award-content">
+            <h3>Creativity Award</h3>
+            <div class="award-org">K-DS Conference Hackathon</div>
+            <p>Developed LLM fine-tuning based on KoAlpaca and Key-Value RAG system for Korean history chatbot.</p>
+            <a href="https://github.com/Noverse0/K-HyunmooGPT" class="pub-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-year">2023</div>
+          <div class="award-content">
+            <h3>Excellence Award</h3>
+            <div class="award-org">Hankook Tire &times; KAIST AI Competition</div>
+            <p>Developed Conditional GAN-based tire footprint image generation model. Extended into the CTIP research project (WACV 2025).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-cta" id="contact">
+    <div class="container">
+      <h2 class="cta-title">Discuss a potential<br><em>collaboration?</em></h2>
+      <p class="cta-description">I am currently preparing for a PhD in AI. If you are interested in my research or would like to collaborate, please feel free to reach out.</p>
+      <div class="cta-links">
+        <a href="mailto:dybroh@gmail.com" class="btn btn-primary btn-lg">
+          <span class="material-symbols-outlined">mail</span> dybroh@gmail.com
+        </a>
+      </div>
+      <div class="cta-social">
+        <a href="https://github.com/Noverse0" target="_blank" rel="noopener">GitHub</a>
+        <span class="cta-dot"></span>
+        <a href="https://www.linkedin.com/in/rohdy" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="cta-dot"></span>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Daeyoung Roh. All rights reserved.</p>
+      <p class="footer-quote">"When in doubt, choose change."</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
