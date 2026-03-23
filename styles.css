@@ -361,6 +361,15 @@ img {
   line-height: 1.8;
 }
 
+.hero-note {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  color: var(--on-surface-dim);
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
 .text-accent {
   color: var(--accent-dim);
   font-weight: 500;
