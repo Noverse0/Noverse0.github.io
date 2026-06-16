@@ -22,7 +22,7 @@ themeToggle.addEventListener('click', () => {
 const langToggle = document.getElementById('langToggle');
 
 function getStoredLang() {
-  return localStorage.getItem('lang') || 'kr';
+  return localStorage.getItem('lang') || 'en';
 }
 
 function applyLang(lang) {

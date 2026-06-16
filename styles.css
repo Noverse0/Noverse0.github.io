@@ -738,6 +738,13 @@ img {
   border-bottom: 1px solid var(--outline);
 }
 
+.pub-section-note {
+  font-size: 0.875rem;
+  color: var(--on-surface-dim);
+  line-height: 1.6;
+  margin: -0.5rem 0 1.5rem;
+}
+
 .pub-list {
   display: flex;
   flex-direction: column;

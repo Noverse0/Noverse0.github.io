@@ -1,0 +1,5 @@
+# OMC local state
+.omc/
+
+# macOS
+.DS_Store
