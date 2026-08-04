@@ -167,6 +167,10 @@
       </div>
       <ul class="news-list">
         <li class="news-item">
+          <span class="news-date">2026.08</span>
+          <span class="news-body"><span class="kr">Agentic RAG의 런타임 결정에 관한 제1저자 논문 2편(HALT · Before Reasoning Fails)을 arXiv에 공개했습니다.</span><span class="en">Released two first-author preprints on runtime decisions for agentic RAG — <a href="https://arxiv.org/abs/2608.02009" target="_blank" rel="noopener">HALT</a> and <a href="https://arxiv.org/abs/2608.02011" target="_blank" rel="noopener">Before Reasoning Fails</a> — on arXiv.</span></span>
+        </li>
+        <li class="news-item">
           <span class="news-date">2026</span>
           <span class="news-body"><span class="kr">추천을 위한 LLM 추론 distillation 논문이 Findings of ACL 2026에 채택되었습니다.</span><span class="en">Paper accepted to Findings of ACL 2026 (LLM reasoning distillation for recommendation).</span></span>
         </li>
@@ -344,13 +348,28 @@
       <!-- Under Submission -->
       <div class="pub-section-sub">
         <h3 class="pub-section-title">Under Submission</h3>
-        <p class="pub-section-note"><span class="kr">아래는 더블 블라인드 심사 중인 논문으로, 익명성 보호를 위해 제목은 비공개합니다. 자세한 내용은 CV에서 확인하실 수 있습니다.</span><span class="en">The following are under double-blind review; titles are withheld to preserve anonymity. Full details are available in my CV.</span></p>
+        <p class="pub-section-note"><span class="kr">일부 논문은 더블 블라인드 심사 중으로, 제목을 비공개합니다.</span><span class="en">Some papers remain under double-blind review; their titles are withheld.</span></p>
         <div class="pub-list">
           <div class="pub-item">
-            <div class="pub-item-venue">EMNLP 2026 · Under Review</div>
+            <div class="pub-item-venue">EMNLP 2026 · Under Review · arXiv</div>
             <div class="pub-item-body">
-              <h4><span class="kr">제1저자 2편 · Retrieval-Augmented Search Agents</span><span class="en">2 papers as first author · Retrieval-Augmented Search Agents</span></h4>
-              <p class="pub-authors"><strong>D. Roh</strong>, D. Han<span class="kr"> · search agent의 신뢰성과 효율(검색 중단·중복 검색 비용)에 관한 연구</span><span class="en"> · on the reliability and efficiency of search agents (when to stop searching, reducing redundant search cost)</span></p>
+              <h4>HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents</h4>
+              <p class="pub-authors"><strong>D. Roh</strong>, D. Han<span class="kr"> · 검색 에이전트의 정지를 evidence coverage로 결정 — 검색 루프 19–45% 절감, 정확도 보존</span><span class="en"> · stops a search agent on evidence coverage rather than generator confidence — 19–45% fewer search loops at preserved accuracy</span></p>
+            </div>
+            <div class="pub-item-links">
+              <a href="https://arxiv.org/abs/2608.02009" class="pub-link" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://github.com/Noverse0/HALT" class="pub-link" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-item-venue">EMNLP 2026 · Under Review · arXiv</div>
+            <div class="pub-item-body">
+              <h4>Before Reasoning Fails: Pre-Evidence Procedural Failures in Agentic RAG</h4>
+              <p class="pub-authors"><strong>D. Roh</strong>, D. Han<span class="kr"> · 에이전트가 검색한 증거를 읽기 전에 답을 확정하는 실패를 궤적 수준에서 진단·차단 — 최대 +9.4pt</span><span class="en"> · diagnoses and gates agents that finalize before reading retrieved evidence — up to +9.4 points recovered</span></p>
+            </div>
+            <div class="pub-item-links">
+              <a href="https://arxiv.org/abs/2608.02011" class="pub-link" target="_blank" rel="noopener">arXiv</a>
             </div>
           </div>
 
