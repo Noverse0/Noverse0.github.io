@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daeyoung Roh | Applied AI Systems Researcher</title>
-  <meta name="description" content="Daeyoung Roh — Applied AI Systems Researcher. Compound AI systems, LLM agents, RAG, efficient recommendation, and AI system evaluation, grounded in production.">
+  <title>Daeyoung Roh</title>
+  <meta name="description" content="Daeyoung Roh — AI Engineer at Ensapia AI Lab, Seoul. Decision-aware LLM systems: runtime control for LLM agents, trajectory-level evaluation, and efficient serving for RAG and recommendation.">
   <link rel="canonical" href="https://noverse0.github.io/">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Daeyoung Roh | Applied AI Systems Researcher">
-  <meta property="og:description" content="Compound AI systems, LLM agents, RAG, efficient recommendation, and AI system evaluation, grounded in production.">
+  <meta property="og:title" content="Daeyoung Roh">
+  <meta property="og:description" content="Decision-aware LLM systems — reliability without wasted computation: when to retrieve, read, verify, stop, or use a smaller model.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://noverse0.github.io/">
   <meta property="og:image" content="https://noverse0.github.io/assets/images/profile.jpg">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Daeyoung Roh | Applied AI Systems Researcher">
-  <meta name="twitter:description" content="Compound AI systems, LLM agents, RAG, efficient recommendation, and AI system evaluation, grounded in production.">
+  <meta name="twitter:title" content="Daeyoung Roh">
+  <meta name="twitter:description" content="Decision-aware LLM systems — reliability without wasted computation: when to retrieve, read, verify, stop, or use a smaller model.">
   <meta name="twitter:image" content="https://noverse0.github.io/assets/images/profile.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <!-- JSON-LD Person schema -->
@@ -38,6 +34,7 @@
     "image": "https://noverse0.github.io/assets/images/profile.jpg",
     "email": "mailto:dybroh@gmail.com",
     "jobTitle": "AI Engineer",
+    "description": "Decision-aware LLM systems — reliability without wasted computation: when to retrieve, read, verify, stop, or use a smaller model.",
     "affiliation": {
       "@type": "Organization",
       "name": "Ensapia (formerly Cocone)"
@@ -62,657 +59,117 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
+  <nav class="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">DY.Roh</a>
+      <a href="index.html" class="nav-name">Daeyoung Roh</a>
       <div class="nav-links">
-        <a href="#news"><span class="kr">소식</span><span class="en">News</span></a>
-        <a href="#focus"><span class="kr">소개</span><span class="en">About</span></a>
-        <a href="#research"><span class="kr">연구</span><span class="en">Research</span></a>
-        <a href="#experience"><span class="kr">경력 및 학력</span><span class="en">Experience</span></a>
-        <a href="#projects"><span class="kr">프로젝트</span><span class="en">Projects</span></a>
-        <a href="#contact"><span class="kr">연락처</span><span class="en">Contact</span></a>
+        <a href="index.html" class="current">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="assets/papers/Daeyoung_Roh_CV.pdf" target="_blank" rel="noopener">CV</a>
       </div>
-      <div class="nav-right">
-        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
-          <span class="lang-label-kr">EN</span>
-          <span class="lang-label-en">KR</span>
-        </button>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
-          <span class="material-symbols-outlined theme-icon-light">light_mode</span>
-        </button>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#news"><span class="kr">소식</span><span class="en">News</span></a>
-      <a href="#focus"><span class="kr">소개</span><span class="en">About</span></a>
-      <a href="#research"><span class="kr">연구</span><span class="en">Research</span></a>
-      <a href="#experience"><span class="kr">경력 및 학력</span><span class="en">Experience</span></a>
-      <a href="#projects"><span class="kr">프로젝트</span><span class="en">Projects</span></a>
-      <a href="#contact"><span class="kr">연락처</span><span class="en">Contact</span></a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <p class="hero-label">APPLIED AI SYSTEMS RESEARCHER</p>
-        <h1 class="hero-title">
-          <em>"Building AI systems<br>that hold up in the<br>real world."</em>
-        </h1>
-        <p class="hero-description">
-          <span class="kr">
-            저는 응용 AI 시스템을 연구합니다. LLM·RAG·에이전트가 검색, 생성, 도구, 인프라, 그리고 사람의 워크플로와 결합될 때 발생하는 신뢰성·지연·비용·유지보수 문제를 다루는 <em>compound AI systems</em>가 핵심 주제이며, 궁극적으로 실제 서비스 환경에서 신뢰 가능하고 비용 효율적으로 작동하는 시스템을 만드는 것을 목표로 합니다.
-          </span>
-          <span class="en">
-            I am a researcher in applied AI systems. My work centers on <em>compound AI systems</em> — understanding and solving the reliability, latency, cost, and maintainability problems that arise when LLMs, RAG, and agents are combined with retrieval, generation, tools, infrastructure, and human workflows — with the goal of building AI that works dependably and cost-effectively in the real world.
-          </span>
-        </p>
-        <p class="hero-description">
-          <span class="kr">
-            KAIST 데이터사이언스대학원에서 이문용 교수님 지도 아래 석사 학위를 취득했으며, 그래프 신경망·하이퍼그래프 대조 학습·추천 시스템·테이블-이미지 생성에 걸쳐 논문을 발표했습니다. 재직 중에도 독립적으로 연구를 지속하여, 최근 retrieval-augmented search agent와 LLM 기반 추천 연구를 EMNLP·CIKM 2026에 투고했습니다.
-          </span>
-          <span class="en">
-            I earned my M.S. at KAIST's Graduate School of Data Science, advised by Prof. Mun Yong Yi, with publications spanning graph neural networks, hypergraph contrastive learning, recommendation, and tabular-to-image generation. I continue to pursue research independently alongside my work, with recent submissions on retrieval-augmented search agents and LLM-driven recommendation to EMNLP and CIKM 2026.
-          </span>
-        </p>
-        <p class="hero-description">
-          <span class="kr">
-            현재 Ensapia (formerly Cocone) AI Lab에서 이 연구를 프로덕션으로 검증하고 있습니다 — 멀티 에이전트 RAG 시스템, LLM 기반 HR 분석 플랫폼, 생성 모델 서빙 파이프라인을 설계·운영합니다.
-          </span>
-          <span class="en">
-            I currently ground this research in production at Ensapia (formerly Cocone), AI Lab, designing and operating multi-agent RAG systems, an LLM-based HR analytics platform, and generative-model serving pipelines.
-          </span>
-        </p>
-        <p class="hero-signature">
-          <span class="kr">Decision-aware LLM 시스템 — 낭비 없는 연산으로 지키는 신뢰: 언제 검색하고, 읽고, 검증하고, 멈추고, 언제 더 작은 모델을 쓸지.</span>
-          <span class="en">Decision-aware LLM systems — reliability without wasted computation: when to retrieve, read, verify, stop, or use a smaller model.</span>
-        </p>
-        <div class="hero-actions">
-          <a href="assets/papers/Daeyoung_Roh_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined">description</span> CV
-          </a>
-          <a href="https://scholar.google.com/citations?user=ma53skIAAAAJ" class="btn btn-secondary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined">school</span> Google Scholar
-          </a>
-          <a href="https://github.com/Noverse0" class="btn btn-secondary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined">code</span> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/rohdy" class="btn btn-secondary" target="_blank" rel="noopener">
-            <span class="material-symbols-outlined">person</span> LinkedIn
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span class="material-symbols-outlined">mail</span> Contact
-          </a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/images/profile.jpg" alt="Daeyoung Roh" class="profile-img" width="413" height="531">
-      </div>
-    </div>
-  </section>
+  <main class="wrap">
 
-  <!-- News -->
-  <section class="section" id="news">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">RECENT</p>
-        <h2 class="section-title"><span class="kr">소식</span><span class="en">News</span></h2>
-      </div>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">2026.08</span>
-          <span class="news-body"><span class="kr">Agentic RAG의 런타임 결정에 관한 제1저자 논문 2편(HALT · Before Reasoning Can Fail)을 arXiv에 공개했습니다.</span><span class="en">Released two first-author preprints on runtime decisions for agentic RAG — <a href="https://arxiv.org/abs/2608.02009" target="_blank" rel="noopener">HALT</a> and <a href="https://arxiv.org/abs/2608.02011" target="_blank" rel="noopener">Before Reasoning Can Fail</a> — on arXiv.</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2026</span>
-          <span class="news-body"><span class="kr">추천을 위한 LLM 추론 distillation 논문이 Findings of ACL 2026에 채택되었습니다.</span><span class="en">Paper accepted to Findings of ACL 2026 (LLM reasoning distillation for recommendation).</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2026</span>
-          <span class="news-body"><span class="kr">제1저자 2편을 EMNLP 2026에, 공동제1저자 2편을 CIKM 2026에 투고했습니다.</span><span class="en">Two first-author papers submitted to EMNLP 2026; two co-first-author papers submitted to CIKM 2026.</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span class="news-body"><span class="kr">Data Mining and Knowledge Discovery (ECML-PKDD Journal Track)에 논문이 게재되었습니다.</span><span class="en">Paper published in Data Mining and Knowledge Discovery (ECML-PKDD Journal Track).</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span class="news-body"><span class="kr">HyFi를 IEEE Big Data 2025에서 발표했고, CTIP가 IEEE/CVF WACV 2025에 게재되었습니다.</span><span class="en">HyFi presented at IEEE Big Data 2025; CTIP published at IEEE/CVF WACV 2025.</span></span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2024.07</span>
-          <span class="news-body"><span class="kr">Ensapia (formerly Cocone) AI Lab에 AI Engineer(전문연구요원)로 합류했습니다.</span><span class="en">Joined Ensapia (formerly Cocone) AI Lab as AI Engineer (Technical Research Personnel).</span></span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Intellectual Focus -->
-  <section class="section section-alt" id="focus">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">INTELLECTUAL FOCUS</p>
-        <h2 class="section-title"><span class="kr">연구 관심사</span><span class="en">Research Interests</span></h2>
-      </div>
-      <div class="focus-grid focus-grid-3">
-        <div class="focus-card focus-card-featured">
-          <div class="focus-icon">
-            <span class="material-symbols-outlined">smart_toy</span>
-          </div>
-          <h3>Runtime Control for LLM Agents</h3>
-          <p>
-            <span class="kr">에이전트가 언제 멈추고, 언제 답을 보류하고, 언제 사람에게 넘겨야 하는지를 연구합니다. 재학습 없이 고정된(frozen) 서빙 경로를 제어 가능하게 유지하고, retrieval-augmented search agent의 신뢰성과 비용을 함께 다루는 시스템 설계에 집중합니다.</span>
-            <span class="en">Studying when an agent should stop, abstain, or escalate. Focused on keeping frozen serving paths controlled without retraining, and on the reliability and cost of retrieval-augmented search agents.</span>
-          </p>
-          <div class="focus-tag">PRIMARY FOCUS</div>
-        </div>
-        <div class="focus-card">
-          <div class="focus-icon">
-            <span class="material-symbols-outlined">fact_check</span>
-          </div>
-          <h3>Evaluation Beyond Accuracy</h3>
-          <p>
-            <span class="kr">최종 답만이 아니라 에이전트의 과정(process)이 신뢰할 만한지를 평가합니다. tool-call trace 기반의 trajectory-level 평가로 절차적 실패를 진단하는 방법을 탐구합니다.</span>
-            <span class="en">Trajectory-level evaluation from tool-call traces — asking whether an agent's process, not just its final answer, is trustworthy, and diagnosing procedural failures.</span>
-          </p>
-        </div>
-        <div class="focus-card">
-          <div class="focus-icon">
-            <span class="material-symbols-outlined">hub</span>
-          </div>
-          <h3>RAGOps & Efficient Serving</h3>
-          <p>
-            <span class="kr">비싼 LLM 추론을 오프라인에 두어(distillation, 오프라인 인덱스·프로파일 생성) 서빙 경로를 경량하게 유지합니다. 추천과 RAG에서의 정확도-효율 trade-off를 다룹니다.</span>
-            <span class="en">Keeping expensive LLM reasoning offline (distillation, offline index/profile generation) so the serving path stays lightweight. Working the accuracy–efficiency trade-off in recommendation and RAG.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research & Publications -->
-  <section class="section" id="research">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">RESEARCH COLLECTION</p>
-        <h2 class="section-title"><span class="kr">연구 및 논문</span><span class="en">Research &amp; Publications</span></h2>
-        <p class="section-subtitle">
-          <span class="kr">확장 가능한 ML과 효율적인 추론에서 프로덕션 AI 시스템까지 — 실제 배포에 기반한 연구.</span>
-          <span class="en">From scalable ML and efficient inference to production AI systems — research grounded in real-world deployment.</span>
+    <header class="profile">
+      <img src="assets/images/profile.jpg" alt="Daeyoung Roh" class="profile-photo" width="413" height="531">
+      <div class="profile-head">
+        <h1>Daeyoung Roh</h1>
+        <p class="profile-role">AI Engineer, AI Lab</p>
+        <p class="profile-affil">Ensapia (formerly Cocone) &middot; Seoul, Korea</p>
+        <p class="profile-links">
+          <a href="mailto:dybroh@gmail.com">dybroh@gmail.com</a>
+          <span class="sep">&middot;</span>
+          <a href="assets/papers/Daeyoung_Roh_CV.pdf" target="_blank" rel="noopener">CV</a>
+          <span class="sep">&middot;</span>
+          <a href="https://scholar.google.com/citations?user=ma53skIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <span class="sep">&middot;</span>
+          <a href="https://github.com/Noverse0" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
+    </header>
 
-      <!-- Featured Publications -->
-      <div class="pub-featured-grid">
-        <div class="pub-card pub-card-featured">
-          <div class="pub-image">
-            <img src="assets/images/ctip-framework.png" alt="CTIP framework diagram: tabular-to-image generation pipeline" loading="lazy" width="1352" height="676">
-          </div>
-          <div class="pub-content">
-            <div class="pub-venue">IEEE/CVF WACV 2025</div>
-            <h3 class="pub-title">CTIP: Towards Accurate Tabular-to-Image Generation for Tire Footprint Generation</h3>
-            <p class="pub-authors"><strong>D. Roh</strong>, D. Han, J. Nam, Y. You, J. Park, J. Oh, M. Yi</p>
-            <p class="pub-desc">
-              <span class="kr">CLIP을 테이블 데이터에 적용한 CTIP를 제안하고, Stable Diffusion을 처음부터 학습하여 산업용 타이어 풋프린트 이미지의 생성 품질을 향상시켰습니다.</span>
-              <span class="en">Proposed CTIP by adapting CLIP for tabular data and trained Stable Diffusion from scratch to improve generation quality for industrial tire footprint images.</span>
-            </p>
-            <div class="pub-links">
-              <a href="assets/papers/ctip-paper.pdf" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="assets/slides/ctip-presentation.pdf" class="pub-link" target="_blank" rel="noopener">Slides</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pub-card pub-card-featured">
-          <div class="pub-image">
-            <img src="assets/images/hyfi-framework.png" alt="HyFi framework diagram: hypergraph contrastive learning with shared groups" loading="lazy" width="1600" height="645">
-          </div>
-          <div class="pub-content">
-            <div class="pub-venue">IEEE Big Data 2025</div>
-            <h3 class="pub-title">Closer through Commonality: Enhancing Hypergraph Contrastive Learning with Shared Groups</h3>
-            <p class="pub-authors"><strong>D. Roh</strong>, D. Han, D. Kim, K. Han, M. Yi</p>
-            <p class="pub-desc">
-              <span class="kr">하이퍼그래프를 위한 세밀한 대조 학습 프레임워크 HyFi를 제안하여, 기존 대조 쌍을 넘어서는 약한 양성/음성 쌍을 도입했습니다.</span>
-              <span class="en">Proposed HyFi, a fine-grained contrastive learning framework for hypergraphs that introduces weak positive/negative pairs beyond standard contrastive pairs.</span>
-            </p>
-            <div class="pub-links">
-              <a href="assets/papers/hyfi-paper.pdf" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="assets/slides/hyfi-presentation.pdf" class="pub-link" target="_blank" rel="noopener">Slides</a>
-              <a href="https://github.com/Noverse0/HyFi" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Published -->
-      <div class="pub-section-sub">
-        <h3 class="pub-section-title">Published</h3>
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-item-venue">Findings of ACL 2026</div>
-            <div class="pub-item-body">
-              <h4>Distilling LLM Reasoning into Dense Encoders: Bridging the Accuracy-Efficiency Gap in Recommendation</h4>
-              <p class="pub-authors">D. Han, <strong>D. Roh</strong>, A. Kim, H. Song, M. Y. Yi</p>
-            </div>
-            <div class="pub-item-links">
-              <a href="assets/papers/r2end-paper.pdf" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="https://github.com/venzino-han/R2END" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-item-venue">DMKD (ECML-PKDD Journal Track) 2025</div>
-            <div class="pub-item-body">
-              <h4>Fine-Grained Multi-Prompt Essay Scoring with Multi-Level Disentanglement</h4>
-              <p class="pub-authors">D. Han, <strong>D. Roh</strong>, E. Han, H. Song, M. Y. Yi</p>
-            </div>
-            <div class="pub-item-links">
-              <a href="assets/papers/MLPAS-paper.pdf" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="assets/slides/mlpas-presentation.pdf" class="pub-link" target="_blank" rel="noopener">Slides</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-item-venue">ACM SAC 2024</div>
-            <div class="pub-item-body">
-              <h4>SIG-Net: GNN-based MOOC Dropout Prediction Model</h4>
-              <p class="pub-authors"><strong>D. Roh</strong>, D. Han, D. Kim, K. Han, M. Yi</p>
-            </div>
-            <div class="pub-item-links">
-              <a href="assets/papers/signet-paper.pdf" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="https://github.com/Noverse0/SIG-Net" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-item-venue">ACM SAC 2024</div>
-            <div class="pub-item-body">
-              <h4>Less is More: Lightweight Graph-based Fashion Recommendation</h4>
-              <p class="pub-authors">D. Kim, D. Han, <strong>D. Roh</strong>, K. Han, M. Yi</p>
-            </div>
-            <div class="pub-item-links">
-              <a href="https://dl.acm.org/doi/pdf/10.1145/3605098.3636168" class="pub-link" target="_blank" rel="noopener">Paper</a>
-              <a href="https://github.com/venzino-han/TGIF_SAC2024" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Under Submission -->
-      <div class="pub-section-sub">
-        <h3 class="pub-section-title">Under Submission</h3>
-        <p class="pub-section-note"><span class="kr">일부 논문은 더블 블라인드 심사 중으로, 제목을 비공개합니다.</span><span class="en">Some papers remain under double-blind review; their titles are withheld.</span></p>
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-item-venue">EMNLP 2026 · Under Review · arXiv</div>
-            <div class="pub-item-body">
-              <h4>HALT: Verification-Aware Stopping for Retrieval-Augmented Search Agents</h4>
-              <p class="pub-authors"><strong>D. Roh</strong>, D. Han<span class="kr"> · 검색 에이전트의 정지를 evidence coverage로 결정 — 최대 45% 검색 절감, 배포 설정은 EM 비열등 검증 통과</span><span class="en"> · stops a search agent on evidence coverage rather than generator confidence — up to 45% fewer search loops, with the deployable setting passing EM non-inferiority</span></p>
-            </div>
-            <div class="pub-item-links">
-              <a href="https://arxiv.org/abs/2608.02009" class="pub-link" target="_blank" rel="noopener">arXiv</a>
-              <a href="https://github.com/Noverse0/HALT" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-item-venue">EMNLP 2026 · Under Review · arXiv</div>
-            <div class="pub-item-body">
-              <h4>Before Reasoning Can Fail: Pre-Evidence Procedural Failures in Agentic RAG</h4>
-              <p class="pub-authors"><strong>D. Roh</strong>, D. Han<span class="kr"> · 에이전트가 검색한 증거를 읽기 전에 답을 확정하는 실패를 궤적 수준에서 진단·차단 — 최대 +9.4pt</span><span class="en"> · diagnoses and gates agents that finalize before reading retrieved evidence — up to +9.4 points recovered</span></p>
-            </div>
-            <div class="pub-item-links">
-              <a href="https://arxiv.org/abs/2608.02011" class="pub-link" target="_blank" rel="noopener">arXiv</a>
-              <a href="https://github.com/Noverse0/before-reasoning-fails" class="pub-link" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-item-venue">CIKM 2026 · Under Review</div>
-            <div class="pub-item-body">
-              <h4><span class="kr">공동제1저자 2편 · LLM 기반 추천 시스템</span><span class="en">2 papers as co-first author · LLM-Driven Recommendation</span></h4>
-              <p class="pub-authors">D. Han*, <strong>D. Roh*</strong>, et al.<span class="kr"> · LLM을 활용한 경량·효율적 추천 모델에 관한 연구 (* 공동제1저자)</span><span class="en"> · on efficient, LLM-derived recommendation models (* equal contribution)</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Experience & Education Section -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <div class="section-header-split">
-        <div>
-          <p class="section-label">CAREER TRAJECTORY</p>
-          <h2 class="section-title"><span class="kr">경력 및 학력</span><span class="en">Experience &amp; Education</span></h2>
-        </div>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-date">2024.07 — Present</div>
-          <div class="timeline-content">
-            <div class="timeline-badge">WORK</div>
-            <div class="timeline-role">AI Engineer</div>
-            <div class="timeline-company">Ensapia (formerly Cocone) · AI Lab</div>
-            <div class="timeline-location"><span class="kr">Seoul, South Korea · 전문연구요원 (병역 대체복무, 연구직 · ~ 2027.09)</span><span class="en">Seoul, South Korea · Technical Research Personnel — Korea's mandatory national service, research track (through Sep 2027)</span></div>
-            <ul class="timeline-details">
-              <li><span class="kr">Flux 기반 디자인 생성 플랫폼의 AI 및 백엔드 개발 리드</span><span class="en">Led AI and backend development for Flux-based design generation platform with fine-tuning and model serving</span></li>
-              <li><span class="kr">사내 지식 검색 자동화를 위한 멀티 에이전트 RAG 시스템 설계 및 개발</span><span class="en">Designed and developed multi-agent RAG system for internal knowledge search automation</span></li>
-              <li><span class="kr">이력서 분석, STT+LLM 면접 평가 리포트 자동 생성 시스템 구축</span><span class="en">Built HR AI analytics platform for resume analysis, interview evaluation with STT+LLM</span></li>
-              <li><span class="kr">Slack 기반 KPI 에이전트 및 법률 AI 저작권 분석 도구 개발</span><span class="en">Developed Slack-based KPI agent and legal AI compliance tool</span></li>
-              <li><span class="kr">AWS EKS, RunPod, PostgreSQL 인프라에 배포 및 운영</span><span class="en">Deployed on AWS EKS, RunPod, PostgreSQL infrastructure</span></li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="tag">LLM</span>
-              <span class="tag">RAG</span>
-              <span class="tag">Flux</span>
-              <span class="tag">AWS EKS</span>
-              <span class="tag">Multi-Agent</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker timeline-marker-edu"></div>
-          <div class="timeline-date">2022.09 — 2024.09</div>
-          <div class="timeline-content">
-            <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
-            <div class="timeline-role"><span class="kr">데이터사이언스 석사</span><span class="en">M.S. in Data Science</span></div>
-            <div class="timeline-company">KAIST · Graduate School of Data Science</div>
-            <div class="timeline-location"><span class="kr">대전, 대한민국 · 지도교수: 이문용</span><span class="en">Daejeon, South Korea · Advisor: Prof. Mun Yong Yi</span></div>
-            <ul class="timeline-details">
-              <li><span class="kr">GNN, 하이퍼그래프 학습, 생성 모델, 추천 시스템 분야에서 5편의 동료 심사 논문 출판 (제1저자 3편)</span><span class="en">Published 5 peer-reviewed papers on GNN, hypergraph learning, generative models, and recommendation (3 as first author)</span></li>
-              <li><span class="kr">한국타이어 산학협력 프로젝트 리드 — 타이어 풋프린트 이미지 생성 (WACV 2025)</span><span class="en">Led Hankook Tire industry collaboration project on tire footprint image generation (WACV 2025)</span></li>
-              <li><span class="kr">ML 기반 반려동물 진단 예측 모델 개발</span><span class="en">Developed pet diagnosis prediction models using ML</span></li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="tag">GNN</span>
-              <span class="tag">Contrastive Learning</span>
-              <span class="tag">Generative Models</span>
-              <span class="tag">Recommendation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-date">2021.07 — 2021.08</div>
-          <div class="timeline-content">
-            <div class="timeline-badge">WORK</div>
-            <div class="timeline-role">AI Core Research Intern</div>
-            <div class="timeline-company">Fount Inc.</div>
-            <div class="timeline-location">Seoul, South Korea</div>
-            <ul class="timeline-details">
-              <li><span class="kr">주가 예측 관련 최신 연구 조사 및 기술 보고서 작성</span><span class="en">Conducted research survey on stock price prediction and prepared technical reports</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker timeline-marker-edu"></div>
-          <div class="timeline-date">2018.03 — 2022.08</div>
-          <div class="timeline-content">
-            <div class="timeline-badge timeline-badge-edu">EDUCATION</div>
-            <div class="timeline-role"><span class="kr">경제학 · 정보통신공학 학사</span><span class="en">B.A. in Economics &amp; Information &amp; Communication Engineering</span></div>
-            <div class="timeline-company"><span class="kr">한동대학교</span><span class="en">Handong Global University</span></div>
-            <div class="timeline-location"><span class="kr">포항, 대한민국 · 정보통신공학 복수전공</span><span class="en">Pohang, South Korea · Information &amp; Communication Engineering (Double Major)</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">TECHNICAL ARCHIVE</p>
-        <h2 class="section-title"><span class="kr">주요 프로젝트</span><span class="en">Key Projects</span></h2>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">chat</span>
-            <span class="project-date">2025 — Present</span>
-          </div>
-          <h3><span class="kr">RAGOps 시스템</span><span class="en">RAGOps System</span></h3>
-          <p>
-            <span class="kr">사내 지식(PDF, 포털, Google 데이터) 검색 자동화를 위한 멀티 에이전트 RAG 시스템. Slack App, LangChain, DeepAgent 기반.</span>
-            <span class="en">Multi-agent RAG system for enterprise knowledge search automation with feedback-driven updates. Built with Slack App, LangChain, and DeepAgent.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">RAG</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">Slack</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">palette</span>
-            <span class="project-date">2024 — 2025</span>
-          </div>
-          <h3><span class="kr">디자인 생성 플랫폼</span><span class="en">Design Generation Platform</span></h3>
-          <p>
-            <span class="kr">Flux 기반 이미지 생성 모델 파인튜닝 및 서빙 시스템. AWS EKS, RunPod 인프라에서 end-to-end 생성 AI 파이프라인 구축.</span>
-            <span class="en">Flux-based image generation model fine-tuning and serving system with AWS EKS, RunPod infrastructure for end-to-end generative AI pipeline.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">Flux</span>
-            <span class="tag">AWS EKS</span>
-            <span class="tag">RunPod</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">gavel</span>
-            <span class="project-date">2025 — 2026</span>
-          </div>
-          <h3><span class="kr">법률 AI 저작권 분석 도구</span><span class="en">Legal AI Compliance Tool</span></h3>
-          <p>
-            <span class="kr">이미지 유사도 검색과 LLM 추론을 결합한 저작권 위반 판단 시스템. 법무팀 실제 검토 프로세스에 적용.</span>
-            <span class="en">Image similarity search combined with LLM reasoning for copyright violation detection. Deployed as internal legal support tool.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">LLM</span>
-            <span class="tag">Image Search</span>
-            <span class="tag">Compliance</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">group</span>
-            <span class="project-date">2025</span>
-          </div>
-          <h3><span class="kr">HR AI 분석 플랫폼</span><span class="en">HR AI Analysis Platform</span></h3>
-          <p>
-            <span class="kr">이력서 분석, 면접 평가(STT+LLM), LLM 기반 인터뷰 분석 챗. 한국·일본에서 실제 HR이 사용하는 프로덕션 서비스.</span>
-            <span class="en">Automated resume analysis, interview evaluation (STT+LLM), and LLM-based interview analysis chat. Production service used in Korea and Japan.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">STT</span>
-            <span class="tag">LLM</span>
-            <span class="tag">Full-stack</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">tire_repair</span>
-            <span class="project-date">2023 — 2024</span>
-          </div>
-          <h3><span class="kr">타이어 풋프린트 이미지 생성</span><span class="en">Tire Footprint Generation</span></h3>
-          <p>
-            <span class="kr">테이블 사양 정보로부터 타이어 풋프린트 이미지를 생성하는 CTIP 모델. 한국타이어 산학협력, WACV 2025 출판.</span>
-            <span class="en">CTIP model for generating tire footprint images from tabular specifications. Hankook Tire industry collaboration, published at WACV 2025.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">CTIP</span>
-            <span class="tag">Stable Diffusion</span>
-            <span class="tag">WACV</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="material-symbols-outlined">bar_chart</span>
-            <span class="project-date">2024 — Present</span>
-          </div>
-          <h3><span class="kr">KPI 에이전트</span><span class="en">KPI Agent</span></h3>
-          <p>
-            <span class="kr">서비스 KPI 조회 및 자동 보고서 생성을 위한 Slack 기반 BI 어시스턴트. 비기술 부서의 실시간 KPI 활용 지원.</span>
-            <span class="en">Slack-based BI assistant for querying service KPIs and generating automated reports for non-technical departments.</span>
-          </p>
-          <div class="project-tags">
-            <span class="tag">Slack Agent</span>
-            <span class="tag">LLM API</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">TECHNICAL REPERTOIRE</p>
-        <h2 class="section-title"><span class="kr">핵심 역량</span><span class="en">Core Competencies</span></h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>LLM & AI Systems</h3>
-          <div class="skill-tags">
-            <span class="tag tag-accent">LLM Serving</span>
-            <span class="tag tag-accent">Multi-Agent RAG</span>
-            <span class="tag tag-accent">Flux Fine-tuning</span>
-            <span class="tag tag-accent">Stable Diffusion</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">STT + LLM Pipeline</span>
-            <span class="tag">Prompt Engineering</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>ML & Research</h3>
-          <div class="skill-tags">
-            <span class="tag tag-accent">GNN</span>
-            <span class="tag tag-accent">Contrastive Learning</span>
-            <span class="tag tag-accent">Recommendation Systems</span>
-            <span class="tag">Knowledge Distillation</span>
-            <span class="tag">XGBoost / LightGBM</span>
-            <span class="tag">PyTorch</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Infrastructure & Serving</h3>
-          <div class="skill-tags">
-            <span class="tag">AWS EKS</span>
-            <span class="tag">RunPod</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Linux</span>
-            <span class="tag">GPU Cluster</span>
-            <span class="tag">Model Serving</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Backend & Data</h3>
-          <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Slack App SDK</span>
-            <span class="tag">REST API</span>
-            <span class="tag">C</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Awards Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">RECOGNITION</p>
-        <h2 class="section-title"><span class="kr">수상 경력</span><span class="en">Honors &amp; Awards</span></h2>
-      </div>
-      <div class="awards-list">
-        <div class="award-item">
-          <div class="award-year">2023</div>
-          <div class="award-content">
-            <h3><span class="kr">창의상</span><span class="en">Creativity Award</span></h3>
-            <div class="award-org"><span class="kr">K-DS 컨퍼런스 해커톤</span><span class="en">K-DS Conference Hackathon</span></div>
-            <p>
-              <span class="kr">KoAlpaca 기반 LLM 파인튜닝과 Key-Value RAG 시스템을 활용한 한국 역사 챗봇 개발.</span>
-              <span class="en">Developed LLM fine-tuning based on KoAlpaca and Key-Value RAG system for Korean history chatbot.</span>
-            </p>
-            <a href="https://github.com/Noverse0/K-HyunmooGPT" class="pub-link" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <div class="award-item">
-          <div class="award-year">2023</div>
-          <div class="award-content">
-            <h3><span class="kr">우수상</span><span class="en">Excellence Award</span></h3>
-            <div class="award-org"><span class="kr">한국앤컴퍼니그룹 &times; KAIST AI 경진대회</span><span class="en">Hankook Tire &times; KAIST AI Competition</span></div>
-            <p>
-              <span class="kr">Conditional GAN 기반 타이어 풋프린트 이미지 생성 모델 개발. CTIP 연구 프로젝트(WACV 2025)로 확장.</span>
-              <span class="en">Developed Conditional GAN-based tire footprint image generation model. Extended into the CTIP research project (WACV 2025).</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section section-cta" id="contact">
-    <div class="container">
-      <h2 class="cta-title">
-        <span class="kr">제 연구에 관심이 있으시다면<br><em>언제든 연락 주세요.</em></span>
-        <span class="en">Interested in my research?<br><em>Let's talk.</em></span>
-      </h2>
-      <p class="cta-description">
-        <span class="kr">제 연구에 관심이 있으시거나 협업을 원하시면 편하게 연락 주세요.</span>
-        <span class="en">If you are interested in my research or would like to collaborate, please feel free to reach out.</span>
+    <section class="bio">
+      <p>
+        I am an AI Engineer at Ensapia (formerly Cocone), AI Lab, in Seoul, Korea. I received my M.S. in Data Science
+        from KAIST, advised by Prof. Mun Yong Yi, and hold a B.A. in Economics and a B.S. in Information &amp;
+        Communication Engineering from Handong Global University.
       </p>
-      <div class="cta-links">
-        <a href="mailto:dybroh@gmail.com" class="btn btn-primary btn-lg">
-          <span class="material-symbols-outlined">mail</span> dybroh@gmail.com
-        </a>
-      </div>
-      <div class="cta-social">
-        <a href="https://github.com/Noverse0" target="_blank" rel="noopener">GitHub</a>
-        <span class="cta-dot"></span>
-        <a href="https://www.linkedin.com/in/rohdy" target="_blank" rel="noopener">LinkedIn</a>
-        <span class="cta-dot"></span>
-        <a href="https://scholar.google.com/citations?user=ma53skIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <span class="cta-dot"></span>
-        <a href="https://drive.google.com/drive/folders/1ZV2OU0GKbqV6w_wD-u7p3OAgCZe7-UH6" target="_blank" rel="noopener">Reading Notes</a>
-      </div>
-    </div>
-  </section>
+      <p>
+        At Ensapia I designed and built the company's production agentic RAG system for enterprise knowledge search.
+        Watching that system fail in deployment — confident hallucination, and multi-hop breakdowns that stayed
+        invisible because the final answer still looked plausible — is what moved me from building these systems to
+        studying how they should be controlled at runtime. That question now drives my independent first-author
+        research, which I continue alongside full-time work.
+      </p>
+      <p class="signature">
+        Decision-aware LLM systems — reliability without wasted computation: when to retrieve, read, verify, stop,
+        or use a smaller model.
+      </p>
+    </section>
 
-  <!-- Footer -->
+    <h2 class="section-title">Research Interests</h2>
+    <ul class="interests">
+      <li>
+        <strong>Runtime control for LLM agents</strong> — when to stop searching, and whether the retrieved evidence
+        was actually read (<a href="publications.html">HALT</a>, <a href="publications.html">READ-GATE</a>)
+      </li>
+      <li>
+        <strong>Evaluation beyond accuracy</strong> — trajectory-level failure decomposition
+      </li>
+      <li>
+        <strong>RAGOps &amp; efficient serving</strong> — confining expensive LLM reasoning to offline stages
+      </li>
+    </ul>
+
+    <h2 class="section-title">News</h2>
+    <ul class="news">
+      <li>
+        <span class="news-date">2026.08</span>
+        <span class="news-body">📄 LiteUP4Rec (co-first author) accepted to CIKM 2026 (Rome, November).</span>
+      </li>
+      <li>
+        <span class="news-date">2026.08</span>
+        <span class="news-body">📄 Two first-author papers on agent runtime control released on arXiv:
+          <a href="https://arxiv.org/abs/2608.02009" target="_blank" rel="noopener">HALT</a> and
+          <a href="https://arxiv.org/abs/2608.02011" target="_blank" rel="noopener">Before Reasoning Can Fail</a>;
+          both under review at EMNLP 2026.</span>
+      </li>
+      <li>
+        <span class="news-date">2026</span>
+        <span class="news-body">📄 Paper on distilling LLM reasoning for recommendation accepted to Findings of ACL 2026.</span>
+      </li>
+      <li>
+        <span class="news-date">2025</span>
+        <span class="news-body">📄 Paper published in Data Mining and Knowledge Discovery (ECML-PKDD Journal Track).</span>
+      </li>
+      <li>
+        <span class="news-date">2025</span>
+        <span class="news-body">📄 HyFi presented at IEEE Big Data 2025; CTIP published at IEEE/CVF WACV 2025.</span>
+      </li>
+      <li>
+        <span class="news-date">2024.07</span>
+        <span class="news-body">🧭 Joined Ensapia (formerly Cocone), AI Lab as an AI Engineer.</span>
+      </li>
+    </ul>
+
+  </main>
+
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Daeyoung Roh. All rights reserved.</p>
+    <div class="footer-inner">
+      <span>&copy; 2026 Daeyoung Roh</span>
+      <span>
+        <a href="mailto:dybroh@gmail.com">Email</a>
+        <span class="sep">&middot;</span>
+        <a href="https://github.com/Noverse0" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">&middot;</span>
+        <a href="https://scholar.google.com/citations?user=ma53skIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <span class="sep">&middot;</span>
+        <a href="https://www.linkedin.com/in/rohdy" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
     </div>
   </footer>
 
-  <script src="main.js"></script>
 </body>
 </html>
