@@ -1,14 +1,42 @@
 /* Daeyoung Roh — minimal academic homepage */
 
 :root {
+  color-scheme: light dark;
+
   --accent: #1A365D;
   --accent-hover: #2C5282;
   --text: #1a1a1a;
   --text-muted: #6b7280;
   --text-faint: #9ca3af;
   --bg: #ffffff;
+  --surface: #f8fafc;
   --rule: #e5e7eb;
+  --rule-faint: #f1f3f5;
+  --link-underline: rgba(26, 54, 93, 0.25);
+
+  /* diagram */
+  --diagram-arrow: #a8b0ba;
+  --diagram-box-bg: #f8fafc;
+
   --max-width: 780px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #7ea2cc;
+    --accent-hover: #a3c0e0;
+    --text: #e6e9ed;
+    --text-muted: #9aa4b0;
+    --text-faint: #7b8592;
+    --bg: #14181d;
+    --surface: #1b2027;
+    --rule: #2a313a;
+    --rule-faint: #21272e;
+    --link-underline: rgba(126, 162, 204, 0.35);
+
+    --diagram-arrow: #6d7783;
+    --diagram-box-bg: #1b2027;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -28,7 +56,7 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid rgba(26, 54, 93, 0.25);
+  border-bottom: 1px solid var(--link-underline);
 }
 
 a:hover {
@@ -101,6 +129,7 @@ a:hover {
   width: 190px;
   flex-shrink: 0;
   border-radius: 4px;
+  border: 1px solid var(--rule);
   display: block;
   height: auto;
 }
@@ -151,7 +180,7 @@ h2.section-title {
   margin: 24px 0 8px;
   padding: 16px 20px;
   border-left: 3px solid var(--accent);
-  background: #f8fafc;
+  background: var(--surface);
   font-size: 1.02rem;
   line-height: 1.6;
 }
@@ -183,6 +212,69 @@ h2.section-title {
 
 .interests strong { font-weight: 600; }
 
+/* ---------- Research diagram ---------- */
+
+.diagram {
+  margin: 28px 0 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  max-width: 680px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.diagram-caption {
+  margin: 10px 0 0;
+  color: var(--text-faint);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* diagram primitives — all colors come from tokens so dark mode follows */
+.dg-box {
+  fill: var(--diagram-box-bg);
+  stroke: var(--accent);
+  stroke-width: 1.25;
+}
+
+.dg-box-label {
+  fill: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.dg-flow {
+  fill: none;
+  stroke: var(--diagram-arrow);
+  stroke-width: 1.25;
+}
+
+.dg-head { fill: var(--diagram-arrow); }
+
+.dg-endpoint {
+  fill: var(--text-muted);
+  font-size: 13px;
+}
+
+.dg-gate {
+  fill: var(--accent);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.dg-hint {
+  fill: var(--text-faint);
+  font-size: 11.5px;
+}
+
 /* ---------- News ---------- */
 
 .news {
@@ -195,7 +287,7 @@ h2.section-title {
   display: flex;
   gap: 18px;
   padding: 10px 0;
-  border-bottom: 1px solid #f1f3f5;
+  border-bottom: 1px solid var(--rule-faint);
   align-items: baseline;
 }
 
@@ -245,7 +337,7 @@ h2.section-title {
 
 .pub {
   padding: 20px 0;
-  border-bottom: 1px solid #f1f3f5;
+  border-bottom: 1px solid var(--rule-faint);
 }
 
 .pub:last-child { border-bottom: none; }

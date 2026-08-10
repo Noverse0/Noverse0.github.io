@@ -123,6 +123,60 @@
       </li>
     </ul>
 
+    <figure class="diagram">
+      <svg viewBox="0 0 620 132" role="img" aria-labelledby="dgTitle dgDesc" preserveAspectRatio="xMidYMid meet">
+        <title id="dgTitle">The agent loop and its runtime decision points</title>
+        <desc id="dgDesc">A query enters a search step that may loop for another hop, then a read step gated by READ-GATE, then a verify step, then a stopping decision gated by HALT, which branches to either answering or abstaining.</desc>
+
+        <defs>
+          <marker id="dgArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path class="dg-head" d="M0,0 L8,4 L0,8 Z"/>
+          </marker>
+        </defs>
+
+        <!-- loop-back on SEARCH -->
+        <text class="dg-hint" x="114" y="20" text-anchor="middle">next hop</text>
+        <path class="dg-flow" d="M140,58 C140,30 88,30 88,58" marker-end="url(#dgArrow)"/>
+
+        <!-- query in -->
+        <text class="dg-endpoint" x="24" y="80" text-anchor="middle">Query</text>
+        <path class="dg-flow" d="M50,76 H70" marker-end="url(#dgArrow)"/>
+
+        <!-- pipeline -->
+        <rect class="dg-box" x="72" y="58" width="84" height="36" rx="4"/>
+        <text class="dg-box-label" x="114" y="80" text-anchor="middle">SEARCH</text>
+        <path class="dg-flow" d="M156,76 H184" marker-end="url(#dgArrow)"/>
+
+        <rect class="dg-box" x="186" y="58" width="68" height="36" rx="4"/>
+        <text class="dg-box-label" x="220" y="80" text-anchor="middle">READ</text>
+        <path class="dg-flow" d="M254,76 H282" marker-end="url(#dgArrow)"/>
+
+        <rect class="dg-box" x="284" y="58" width="78" height="36" rx="4"/>
+        <text class="dg-box-label" x="323" y="80" text-anchor="middle">VERIFY</text>
+        <path class="dg-flow" d="M362,76 H390" marker-end="url(#dgArrow)"/>
+
+        <rect class="dg-box" x="392" y="58" width="74" height="36" rx="4"/>
+        <text class="dg-box-label" x="429" y="80" text-anchor="middle">STOP?</text>
+
+        <!-- branch to answer / abstain -->
+        <path class="dg-flow" d="M466,76 H498"/>
+        <path class="dg-flow" d="M498,76 V56 H528" stroke-linejoin="round" marker-end="url(#dgArrow)"/>
+        <path class="dg-flow" d="M498,76 V96 H528" stroke-linejoin="round" marker-end="url(#dgArrow)"/>
+        <text class="dg-endpoint" x="540" y="60">Answer</text>
+        <text class="dg-endpoint" x="540" y="100">Abstain</text>
+
+        <!-- gate annotations -->
+        <path class="dg-flow" d="M220,94 V103" stroke-dasharray="2 2"/>
+        <text class="dg-gate" x="220" y="115" text-anchor="middle">READ-GATE</text>
+
+        <path class="dg-flow" d="M429,94 V103" stroke-dasharray="2 2"/>
+        <text class="dg-gate" x="429" y="115" text-anchor="middle">HALT</text>
+      </svg>
+      <figcaption class="diagram-caption">
+        One agenda, three runtime decisions — when to stop, whether it read, when to verify.
+      </figcaption>
+    </figure>
+
     <h2 class="section-title">News</h2>
     <ul class="news">
       <li>
